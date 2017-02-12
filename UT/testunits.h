@@ -8,6 +8,10 @@ class TestUnits : public QObject {
 
 private slots:
     void testEmpty();
+    void speedIsZeroAfterCreation();
+    void speedIsZeroWhenPaceIsZero();
+    void testToKmPerH();
+    void testConvertions();
 };
 
 #endif // TESTUNITS_H

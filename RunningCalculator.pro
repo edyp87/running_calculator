@@ -25,13 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         runningcalculatorwidget.cpp \
-    runningcalculator.cpp \
-    UT/testunits.cpp
+        runningcalculator.cpp \
+
 
 HEADERS  += runningcalculatorwidget.h \
     runningcalculator.h \
-    units.h \
-    UT/testunits.h
+    units.h
 
 FORMS    += runningcalculatorwidget.ui
 
@@ -43,10 +42,11 @@ test {
     SOURCES -= main.cpp
 
     HEADERS += \
-        UT/testmathparser.h
+        UT/testunits.cpp
 
     SOURCES += \
-        UT/main.cpp
+        UT/main.cpp \
+        UT/testunits.cpp
 } else {
     message(Normal build)
 }
