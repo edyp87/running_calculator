@@ -8,12 +8,12 @@ RunningCalculatorWidget::RunningCalculatorWidget(QWidget *parent) :
     ui(new Ui::RunningCalculatorWidget)
 {
     ui->setupUi(this);
-    QObject::connect(ui->speedEdit, QLineEdit::textChanged,
-                     this, RunningCalculatorWidget::changedSpeed);
-    QObject::connect(ui->paceEdit, QLineEdit::textChanged,
-                     this, RunningCalculatorWidget::changedPace);
-    QObject::connect(ui->calculateButton, QPushButton::clicked,
-                     this, RunningCalculatorWidget::calculatePressed);
+    QObject::connect(ui->speedEdit, &QLineEdit::textChanged,
+                     this, &RunningCalculatorWidget::changedSpeed);
+    QObject::connect(ui->paceEdit, &QLineEdit::textChanged,
+                     this, &RunningCalculatorWidget::changedPace);
+    QObject::connect(ui->calculateButton, &QPushButton::clicked,
+                     this, &RunningCalculatorWidget::calculatePressed);
 }
 
 RunningCalculatorWidget::~RunningCalculatorWidget()
